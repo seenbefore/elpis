@@ -23,7 +23,7 @@ module.exports = (app) => {
   })
 
   // 路由兜底(健壮性)
-  router.all('*', async (ctx, next) => {
+  router.get('*', async (ctx, next) => {
     ctx.status = 302; // 302 临时重定向
     ctx.redirect(`${app?.options?.homePage ?? '/'}`);
   })

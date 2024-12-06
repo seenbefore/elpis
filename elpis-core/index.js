@@ -16,6 +16,10 @@ module.exports = {
   /**
    * 启动项目
    * @params options 项目配置
+   * options = {
+   *   name // 项目名称
+   *   homePage // 项目首页
+   * }
    */
   start(options = {}) {
     // koa 实例
