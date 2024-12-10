@@ -23,7 +23,7 @@ module.exports = (app) => {
   const middlewarePath = path.resolve(app.businessPath, `.${sep}middleware`);
   const fileList = glob.sync(path.resolve(middlewarePath, `.${sep}**${sep}**.js`));
 
-  // 遍历所有文件目录，把内容加载到 app.middleware 上
+  // 遍历所有文件目录，把内容加载到 app.middlewares 上
   const middlewares = {};
   fileList.forEach(file =>{
     // 提出文件名称
