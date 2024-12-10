@@ -32,13 +32,13 @@ module.exports = (app) => {
   try {
     if(app.env.isLocal()){ // 本地环境
       envConfig = require(path.resolve(configPath, `.${sep}config.local.js`));
-    }else if(app.env.isBeta()){ // 测试环境
+    } else if(app.env.isBeta()){ // 测试环境
       envConfig = require(path.resolve(configPath, `.${sep}config.beta.js`));
-    }else if(app.env.isProduction()){ // 生产环境
+    } else if(app.env.isProduction()){ // 生产环境
       envConfig = require(path.resolve(configPath, `.${sep}config.prod.js`));        
     }
   } catch (e) {
-    console.error('[exception] env.config file not found');
+    console.error('Error loading config:', e);
   }
   
   // 覆盖并加载到 app.config 上
