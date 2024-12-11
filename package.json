@@ -10,7 +10,9 @@
     "prod": "_ENV='production' node ./index.js",
     "dev:win": "set _ENV=local&& nodemon ./index.js",
     "beta:win": "set _ENV=beta&& node ./index.js",
-    "prod:win": "set _ENV=production&& node ./index.js"
+    "prod:win": "set _ENV=production&& node ./index.js",
+    "build:dev": "node --max_old_space_size=4096 ./app/webpack/dev.js",
+    "build:prod": "node ./app/webpack/prod.js"
   },
   "repository": {
     "type": "git",
