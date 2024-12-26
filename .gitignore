@@ -3,3 +3,4 @@ package-lock.json
 config.local.js
 .vscode/launch.json
 logs/application.log
+app/public/dist
